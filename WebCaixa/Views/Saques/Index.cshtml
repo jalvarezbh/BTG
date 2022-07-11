@@ -1,0 +1,53 @@
+﻿@model WebCaixa.Models.SolicitarSaqueViewModel
+@{
+    ViewData["Title"] = "Caixa";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Solicitar Saque</h1>
+    <p></p>
+</div>
+@using (Html.BeginForm("EfetuarSaque", "Saques", FormMethod.Post))
+{
+    <div class="text-center">
+        <p>
+            Notas disponíveis
+        <p style="color:red">@Model.Erro</p>
+        </p>
+    </div>
+    <div class="text-center">
+        <p>
+            @Html.HiddenFor(m => m.IdNotas10)
+            @Html.HiddenFor(m => m.QuantidadeNotas10)
+            Notas 10: @Model.QuantidadeNotas10
+        </p>
+    </div>
+    <div class="text-center">
+        <p>
+            @Html.HiddenFor(m => m.IdNotas20)
+            @Html.HiddenFor(m => m.QuantidadeNotas20)
+            Notas 20: @Model.QuantidadeNotas20
+        </p>
+    </div><div class="text-center">
+              <p>
+                  @Html.HiddenFor(m => m.IdNotas50)
+                  @Html.HiddenFor(m => m.QuantidadeNotas50)
+                  Notas 50: @Model.QuantidadeNotas50
+              </p>
+    </div><div class="text-center">
+              <p>
+                  @Html.HiddenFor(m => m.IdNotas100)
+                  @Html.HiddenFor(m => m.QuantidadeNotas100)
+                  Notas 100: @Model.QuantidadeNotas100
+              </p>
+    </div>
+    <div class="text-center">
+        <p>
+            Valor Saque: @Html.TextBoxFor(m => m.ValorSaque)
+        </p>
+    </div>
+    <div class="text-center">
+        <input type="submit" value="Solicitar" />
+    </div>
+
+}

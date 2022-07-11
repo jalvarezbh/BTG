@@ -1,0 +1,37 @@
+﻿@model WebCaixa.Models.EfetivarSaqueViewModel
+@{
+    ViewData["Title"] = "Caixa";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Extrato do Saque</h1>
+    <p></p>
+</div>
+    <div class="text-center">
+        <p>
+            Notas disponíveis
+        </p>
+    </div>
+    <div class="text-center">
+        <p>
+            Notas 10: @Model.QuantidadeNotas10
+        </p>
+    </div>
+    <div class="text-center">
+        <p>
+            Notas 20: @Model.QuantidadeNotas20
+        </p>
+    </div><div class="text-center">
+        <p>           
+            Notas 50: @Model.QuantidadeNotas50
+        </p>
+    </div><div class="text-center">
+        <p>           
+            Notas 100: @Model.QuantidadeNotas100
+        </p>
+    </div>
+    <div class="text-center">
+        <p>
+            Valor Saque: @Model.ValorSaque
+        </p>
+    </div>
